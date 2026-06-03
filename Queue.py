@@ -30,8 +30,6 @@ class Queue:
             return None
 
         removed = self.tasks.pop(0)
-        for i,task in enumerate(self.tasks):
-            task.id_number = i+1
         return removed
         
 
