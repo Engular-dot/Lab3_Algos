@@ -15,13 +15,14 @@ class Queue:
     def __init__(self):
 
         self.tasks:List[Task] = []
+        self._next_id = 1
 
     def enqueue(self,description,priority):
         
-        id_number = len(self.tasks)+1
-        new_task = Task(id_number, description, priority)
+        new_task = Task(self._next_id, description, priority)
         self.tasks.append(new_task)
         print(f"Задача {id_number} добавлена в очередь")
+        self._nex_id += 1
 
     def dequeue(self):
 
