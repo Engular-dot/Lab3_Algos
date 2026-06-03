@@ -28,9 +28,7 @@ class Queue:
         if self.isEmpty():
             print("Список пуст")
             return None
-
-        removed = self.tasks.pop(0)
-        return removed
+        return self.tasks.pop(0)
         
 
     def front(self):
